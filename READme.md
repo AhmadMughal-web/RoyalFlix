@@ -154,7 +154,7 @@ This project is currently **in active development** and is part of my portfolio 
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/yourusername/royalflix.git
+git clone https://github.com/AhmadMughal-web/RoyalFlix.git
 cd royalflix
 
 # 2. Setup Frontend
