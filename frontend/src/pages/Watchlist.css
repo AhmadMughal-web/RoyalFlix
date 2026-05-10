@@ -1,0 +1,125 @@
+/* Watchlist.css */
+.watchlist-page {
+    min-height: 100vh;
+    padding: 100px 5% 60px;
+}
+
+.watchlist-header {
+    margin-bottom: 32px;
+}
+
+.watchlist-header h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+
+.watchlist-header p {
+    color: var(--muted);
+    font-size: 0.88rem;
+    margin-top: 6px;
+}
+
+.watchlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 16px;
+}
+
+.watchlist-empty {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.watchlist-empty span {
+    font-size: 3rem;
+    display: block;
+    margin-bottom: 16px;
+    opacity: 0.3;
+}
+
+.watchlist-empty p {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.watchlist-empty small {
+    color: var(--muted);
+}
+
+.watchlist-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 16px;
+}
+
+.wl-card {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    aspect-ratio: 2/3;
+    cursor: pointer;
+}
+
+.wl-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.wl-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0) 50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 12px;
+}
+
+.wl-card:hover .wl-overlay {
+    opacity: 1;
+}
+
+.wl-play {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--cyan);
+    border: none;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.wl-title {
+    font-size: 0.78rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 8px;
+    line-height: 1.3;
+}
+
+.wl-remove {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: rgba(255, 61, 87, 0.2);
+    border: 1px solid rgba(255, 61, 87, 0.4);
+    color: var(--red);
+    font-size: 0.72rem;
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-family: 'Nunito', sans-serif;
+    transition: all 0.2s;
+}
+
+.wl-remove:hover {
+    background: rgba(255, 61, 87, 0.35);
+}

@@ -1,0 +1,58 @@
+.footer {
+  background: var(--dark2);
+  border-top: 1px solid var(--border);
+  padding: 60px 5% 30px;
+  margin-top: 40px;
+}
+.footer-top {
+  display: flex; gap: 60px; margin-bottom: 40px; flex-wrap: wrap;
+}
+.footer-brand { max-width: 280px; }
+.footer-logo {
+  font-family: 'Bebas Neue', sans-serif; font-size: 2rem;
+  color: var(--cyan); letter-spacing: 3px; margin-bottom: 12px;
+  text-shadow: 0 0 20px rgba(0,229,255,0.3);
+}
+.footer-logo span { color: #fff; }
+.footer-brand p { color: var(--muted); font-size: 0.85rem; line-height: 1.65; margin-bottom: 20px; }
+
+.footer-socials { display: flex; gap: 10px; }
+.social-btn {
+  width: 38px; height: 38px; border-radius: 8px;
+  background: rgba(255,255,255,0.05); border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1rem; transition: all 0.2s; text-decoration: none;
+}
+.social-btn:hover { border-color: var(--cyan); background: rgba(0,229,255,0.08); }
+
+.footer-links { display: flex; gap: 48px; flex: 1; flex-wrap: wrap; }
+.footer-col { display: flex; flex-direction: column; gap: 10px; min-width: 120px; }
+.footer-col h4 {
+  font-size: 0.75rem; font-weight: 800; text-transform: uppercase;
+  letter-spacing: 1.5px; color: var(--cyan); margin-bottom: 4px;
+}
+.footer-col a {
+  color: var(--muted); font-size: 0.85rem; transition: color 0.2s; text-decoration: none;
+}
+.footer-col a:hover { color: var(--text); }
+
+.footer-bottom {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.06);
+  flex-wrap: wrap; gap: 12px;
+}
+.footer-bottom p { color: var(--muted); font-size: 0.8rem; }
+.footer-audio { display: flex; gap: 8px; }
+.audio-pill {
+  font-size: 0.68rem; font-weight: 800; padding: 3px 9px; border-radius: 4px;
+  background: rgba(0,229,255,0.08); color: var(--cyan); border: 1px solid rgba(0,229,255,0.2);
+}
+.audio-pill.hindi {
+  background: rgba(255,153,0,0.1); color: #ff9900; border-color: rgba(255,153,0,0.25);
+}
+
+@media (max-width: 768px) {
+  .footer-top { flex-direction: column; gap: 36px; }
+  .footer-brand { max-width: 100%; }
+  .footer-links { gap: 28px; }
+}

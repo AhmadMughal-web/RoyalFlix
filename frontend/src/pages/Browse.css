@@ -1,0 +1,35 @@
+/* Browse.css */
+.browse-page { min-height: 100vh; padding: 100px 5% 60px; }
+.browse-header { margin-bottom: 32px; }
+.browse-header h1 { font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem; letter-spacing: 2px; margin-bottom: 16px; }
+.browse-filters { display: flex; gap: 10px; flex-wrap: wrap; }
+.filter-btn {
+  padding: 8px 18px; border-radius: 8px; font-size: 0.82rem; font-weight: 700;
+  border: 1px solid rgba(255,255,255,0.12); background: none; color: var(--muted);
+  transition: all 0.2s; font-family: 'Nunito', sans-serif;
+}
+.filter-btn:hover { color: var(--text); border-color: rgba(255,255,255,0.3); }
+.filter-btn.active { border-color: var(--cyan); color: var(--cyan); background: rgba(0,229,255,0.08); }
+.browse-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 16px; margin-bottom: 36px; }
+.load-more {
+  display: block; margin: 0 auto;
+  background: none; border: 1px solid var(--border); color: var(--text);
+  padding: 12px 32px; border-radius: 8px; font-size: 0.88rem; font-weight: 700;
+  transition: all 0.2s; font-family: 'Nunito', sans-serif;
+}
+.load-more:hover { border-color: var(--cyan); color: var(--cyan); }
+
+/* Seasons */
+.seasons-section { margin-top: 24px; }
+.seasons-tabs { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+.season-tab {
+  padding: 6px 14px; border-radius: 6px; font-size: 0.8rem; font-weight: 700;
+  border: 1px solid rgba(255,255,255,0.12); background: none; color: var(--muted);
+  transition: all 0.2s; font-family: 'Nunito', sans-serif;
+}
+.season-tab.active { border-color: var(--cyan); color: var(--cyan); background: rgba(0,229,255,0.08); }
+.season-info { color: var(--muted); font-size: 0.82rem; }
+
+@media (max-width: 600px) {
+  .browse-grid { grid-template-columns: repeat(auto-fill, minmax(110px, 1fr)); gap: 10px; }
+}

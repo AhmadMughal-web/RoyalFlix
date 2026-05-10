@@ -1,0 +1,55 @@
+.player-page { min-height: 100vh; background: #000; display: flex; flex-direction: column; }
+.player-loading { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: #000; }
+
+.player-topbar {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 24px; background: rgba(6,10,15,0.95);
+  border-bottom: 1px solid var(--border); gap: 16px; flex-wrap: wrap;
+  position: sticky; top: 0; z-index: 10;
+}
+.player-back {
+  display: flex; align-items: center; gap: 7px;
+  background: none; border: none; color: var(--muted); font-size: 0.85rem;
+  font-weight: 700; transition: color 0.2s; font-family: 'Nunito', sans-serif;
+}
+.player-back:hover { color: var(--cyan); }
+.player-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 2px; color: #fff; flex: 1; text-align: center; }
+
+.player-controls { display: flex; align-items: center; gap: 14px; }
+.audio-switcher { display: flex; align-items: center; gap: 8px; }
+.audio-label { color: var(--muted); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; }
+.audio-opt {
+  font-size: 0.75rem; font-weight: 700; padding: 5px 12px; border-radius: 6px;
+  border: 1px solid rgba(255,255,255,0.15); background: none; color: var(--muted);
+  transition: all 0.2s; font-family: 'Nunito', sans-serif;
+}
+.audio-opt.active { border-color: var(--cyan); color: var(--cyan); background: rgba(0,229,255,0.08); }
+.audio-opt:hover { color: var(--text); }
+
+.player-download {
+  display: flex; align-items: center; gap: 6px;
+  background: linear-gradient(135deg, var(--cyan), var(--cyan2));
+  color: #000; font-size: 0.78rem; font-weight: 800;
+  padding: 7px 16px; border-radius: 7px; border: none;
+  font-family: 'Nunito', sans-serif; transition: all 0.2s;
+}
+.player-download:hover { box-shadow: 0 6px 20px var(--cyan-glow); }
+
+.player-frame-wrapper {
+  flex: 1; width: 100%; background: #000;
+  aspect-ratio: 16/9; max-height: calc(100vh - 130px);
+}
+.player-frame { width: 100%; height: 100%; border: none; display: block; }
+
+.player-note { background: var(--dark2); border-top: 1px solid var(--border); padding: 16px 24px; }
+.player-note-inner {
+  max-width: 700px; margin: 0 auto; display: flex; align-items: flex-start; gap: 12px;
+}
+.player-note-inner span { font-size: 1.3rem; flex-shrink: 0; }
+.player-note-inner p { color: var(--muted); font-size: 0.83rem; line-height: 1.6; }
+
+@media (max-width: 600px) {
+  .player-topbar { padding: 10px 14px; }
+  .player-title { font-size: 1rem; }
+  .audio-switcher { display: none; }
+}
