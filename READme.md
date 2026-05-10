@@ -145,54 +145,6 @@ This project is currently **in active development** and is part of my portfolio 
 
 ---
 
-<div align="center">
-
-## 📁 Project Structure
-
-</div>
-
-```
-RoyalFlix/
-│
-├── 📦 frontend/                    # React + Vite Application
-│   ├── 📂 src/
-│   │   ├── 🧩 components/
-│   │   │   ├── Navbar/             # Smart navbar with dropdowns
-│   │   │   ├── Hero/               # Auto-sliding cinematic hero
-│   │   │   ├── MovieCard/          # Card + scrollable row
-│   │   │   └── Footer/             # Footer with links
-│   │   │
-│   │   ├── 📄 pages/
-│   │   │   ├── Home.jsx            # Landing page with all rows
-│   │   │   ├── Movies.jsx          # Browse with genre filters
-│   │   │   ├── TVShows.jsx         # TV with origin filters
-│   │   │   ├── Anime.jsx           # Anime with genre filters
-│   │   │   ├── MovieDetail.jsx     # Full movie info + trailer
-│   │   │   ├── TVDetail.jsx        # TV seasons + episodes
-│   │   │   ├── Player.jsx          # Video player page
-│   │   │   ├── Search.jsx          # Global search
-│   │   │   ├── Login.jsx           # Auth page
-│   │   │   ├── Register.jsx        # Registration
-│   │   │   ├── Profile.jsx         # User profile
-│   │   │   └── Watchlist.jsx       # Saved titles
-│   │   │
-│   │   ├── 🔄 context/
-│   │   │   └── AuthContext.jsx     # Global auth state
-│   │   │
-│   │   └── 🌐 services/
-│   │       └── tmdb.js             # TMDb API service layer
-│   │
-└── 🖥️ backend/                     # Node.js + Express API
-    ├── 📂 src/
-    │   ├── config/db.js            # MongoDB connection
-    │   ├── models/User.model.js    # User schema
-    │   ├── controllers/            # Business logic
-    │   ├── routes/                 # API endpoints
-    │   └── middleware/             # Auth + error handlers
-    └── server.js                   # Express entry point
-```
-
----
 
 <div align="center">
 
@@ -222,59 +174,7 @@ npm run dev
 # Runs on http://localhost:5000
 ```
 
-**Frontend `.env`**
-```env
-VITE_TMDB_API_KEY=your_tmdb_api_key
-VITE_TMDB_BASE_URL=https://api.themoviedb.org/3
-VITE_TMDB_IMAGE_URL=https://image.tmdb.org/t/p
-VITE_BACKEND_URL=http://localhost:5000/api
-VITE_GOOGLE_CLIENT_ID=your_google_client_id
-```
 
-**Backend `.env`**
-```env
-PORT=5000
-MONGO_URI=mongodb://localhost:27017/royalflix
-JWT_SECRET=your_secret_key
-JWT_EXPIRES_IN=7d
-GOOGLE_CLIENT_ID=your_google_client_id
-TMDB_API_KEY=your_tmdb_api_key
-CLIENT_URL=http://localhost:3000
-```
-
----
-
-<div align="center">
-
-## 🔌 API Endpoints
-
-</div>
-
-```
-🔐 AUTH
-POST   /api/auth/register        Register new user
-POST   /api/auth/login           Login with email/password
-POST   /api/auth/google          Google OAuth login
-GET    /api/auth/me              Get current user
-
-👤 USER (Protected)
-GET    /api/user/watchlist       Get user watchlist
-POST   /api/user/watchlist       Add to watchlist
-DELETE /api/user/watchlist/:id   Remove from watchlist
-GET    /api/user/history         Get watch history
-POST   /api/user/history         Update watch history
-PUT    /api/user/profile         Update profile
-
-🎬 MOVIES
-GET    /api/movies/trending      Trending content
-GET    /api/movies/popular       Popular movies
-GET    /api/movies/search?q=     Search content
-GET    /api/movies/:id           Movie details
-```
-
----
-
-<div align="center">
 
 ## 📊 Progress Tracker
 
